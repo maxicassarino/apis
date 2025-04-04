@@ -8,8 +8,9 @@ async function Pokemons() {
         const data = await response.json();
 
         const pokemonCard = document.createElement('div');
+        pokemonCard.classList.add('col');
         pokemonCard.innerHTML = `
-            <h2>${data.name.toUpperCase()}</h2>
+            <h4>${data.name.toUpperCase()}</h4>
             <img src="${data.sprites.front_default}" alt="${data.name}">
         `;
         div.appendChild(pokemonCard);
